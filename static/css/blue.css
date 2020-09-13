@@ -1,0 +1,13 @@
+/* css variable properties for blue mode of theme */
+
+:root {
+    --mainColor: #152028;
+    --secondaryColor: #192734;
+    --borderColor: #164d56;
+    --mainText: #fff;
+    --secondaryText: #eeeeee;
+    --themeDotBorder: #ffff;
+    --previewBg: rgb(25, 39, 52, 0.8);
+    --previewShadow: #111921;
+    --buttonColor:#1db2c9;
+  }
