@@ -26,16 +26,16 @@ for (var i = 0; i < themeDots.length; i++) {
 //set the style respected to the selected mode
 function setTheme(mode) {
     if (mode == 'light') {
-        document.getElementById('theme-style').href = 'style.css';
+        document.getElementById('theme-style').href = static + '/style.css';
     }
     else if (mode == 'blue') {
-        document.getElementById('theme-style').href = 'blue.css';
+        document.getElementById('theme-style').href = static + '/blue.css';
     }
     else if (mode == 'green') {
-        document.getElementById('theme-style').href = 'green.css';
+        document.getElementById('theme-style').href = static + '/green.css';
     }
     else if (mode == 'purple') {
-        document.getElementById('theme-style').href = 'purple.css';
+        document.getElementById('theme-style').href = static + '/purple.css';
     }
     // store the mode in local storage
     localStorage.setItem('theme', mode);
