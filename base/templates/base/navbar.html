@@ -8,6 +8,9 @@
         </div>
     </a>
     <ul id="navigation">
-        <li><a href="#contact-form">Contact</a></li>
+        <li><a href="{%url 'home'%}#contact-form">Contact</a></li>
+        {%if request.user.is_authenticated%}
+        <li><a href="{%url 'create_post'%}">Create Post</a></li>
+        {%endif%}
     </ul>
 </div>

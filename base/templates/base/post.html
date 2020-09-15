@@ -1,12 +1,17 @@
 {%extends 'base/main.html'%}
 {%load static%}
 {%block content%}
+<style>
+    img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+</style>
 <div class="main-container">
-    <h1>POST TITLE</h1>
-    <img style="height: 50%; width:50%" src="{%static 'images/portfolio-img.jpg'%}" alt="portfolio-img">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus tempora velit tempore impedit accusamus soluta
-        dolorem aut quas libero provident aspernatur dolor illum porro quidem mollitia, consectetur ipsam fugiat
-        consequuntur hic perspiciatis voluptate. Nisi, temporibus optio quas reiciendis, ullam voluptates earum
-        voluptatem soluta repellat distinctio aspernatur saepe laboriosam similique neque.</p>
+    <img  src="{{post.thumbnail.url}}" alt="portfolio-img">
+    <h1>{{post.headline}}</h1>
+    <h4>{{post.sub_headline}}</h4>
+    <h4>{{post.created}}</h4>
+    <p>{{post.body|linebreaks}}</p>
 </div>
 {%endblock content%}
