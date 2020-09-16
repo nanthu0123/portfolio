@@ -4,7 +4,7 @@
 {%block content%}
 
 <Style>
-    #div_id_tags>div{
+    #div_id_tags>div {
         max-height: 100px;
         overflow-y: scroll;
         border: 1px solid #888;
@@ -50,7 +50,11 @@
         {%if posts.has_other_pages%}
         <ul class="pagination">
             {%for i in posts.paginator.page_range%}
-            <li class="page-item"><a href="page-link">{{i}}</a></li>
+            {%if posts.number==i%}
+            <li class="page-item"><a class="active page-link">{{i}}</a></li>
+            {%else%}
+            <li class="page-item"><a href="?page={{i}}" class="page-link">{{i}}</a></li>
+            {%endif%}
             {%endfor%}
         </ul>
         {%endif%}
