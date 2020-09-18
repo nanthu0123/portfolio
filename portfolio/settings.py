@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'crispy_forms',
     'django_filters',
+    'ckeditor',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -133,9 +134,17 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'statisfiles')
 
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='nanthu0123@gmail.com'
-EMAIL_HOST_PASSWORD='idflbpuigwzzbspv'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'nanthu0123@gmail.com'
+EMAIL_HOST_PASSWORD = 'idflbpuigwzzbspv'
+
+CKEDITOR_CONFIG = {
+    'default': {
+        'toolbar': 'full',
+        'height': '300',
+        'width': '100%',
+    },
+}
