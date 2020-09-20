@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django_filters',
     'ckeditor',
     'ckeditor_uploader',
+    'storages',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -151,3 +152,14 @@ CKEDITOR_CONFIGS = {
 }
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+# AWS S3 bucket storage configuration
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIA27AGUPNR3SHV4DM7'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'nanthagopal-portfolio'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
